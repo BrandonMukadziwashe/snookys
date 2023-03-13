@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Snooky's Order Form</title>
+<script src="jquery-3.6.3.min.js"></script>
+<link rel="stylesheet" href="menu.css" />
+    <!-- <link rel="stylesheet" href="menu.css" /> whats this for? -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+<style>
+    .addToCart{
+    width:30px;
+    height: 30px;
+    }
+    .cartPage{
+    margin: 100px auto;
+    }
+    .productTable{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .cartInfo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    tr{
+        border-bottom: 2px solid darkolivegreen;
+        background: beige;
+    }
+    th{
+        text-align: left;
+        padding: 5px;
+        color: black;
+        background: #feeee8;
+        font-weight: bold;
+    }
+    td{
+        padding: 10px 5px;
+    }
+    td input{
+        width: 40px;
+        height: 30px;
+        padding: 5px;
+    }
+    td a{
+        text-decoration: none;
+        color: blue;
+        font-size: 12px;
+    }
+    .cartItemImage{
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+    .totalPrice{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 20px;
+    }
+    .totalPrice table{
+        border-top: 3px solid darkolivegreen;
+        width: 100%;
+        max-width: 400px;
+    }
+    td:last-child{
+        text-align: right;
+    }
+    th:last-child{
+        text-align: right;
+    }
+
+    @media only screen and (max-width: 600px){
+        .cartInfo p{
+        display: none;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .menuItemImage{
+          width: 120px;
+          height: 120px;
+        }
+        .addToCart{
+          float: right;
+        }
+    }
+</style>
+<script>
+    function td(content, className="")
+    {
+        return "<td class = '" + className + "'>" + content + "</td>";
+    }
+</script>
+</head>
+<body>
+    <!-- Navigation Bar-->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Snooky's</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="menu.html" class="navbar__links" id="menu">Menu</a>
+            </li>
+            <li class="navbar__item">
+                <a href="aboutUs.html" class="navbar__links" id="about_us">About Us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="order.html" class="navbar__links" id="order_form">Order Form</a>
+            </li>
+            <li class="navbar__item">
+                <a href="locations.html" class="navbar__links" id="locations">Locations</a>
+            </li>
+            <li class="navbar__item">
+                <a href="reviews.html" class="navbar__links" id="reviews">Reviews</a>
+            </li>
+            <li class="navbar__item">
+                <a href="contactUs.html" class="navbar__links" id="contact_us">Contact Us</a>
+            </li>
+          
+          <li style="padding-bottom: 2rem;display: flex; align-items: center;
+          justify-content: center; width: 100%;
+          padding: 0 1rem;"><a href="order.html" class="button" id="order">Order Now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="menuContainer">
+        <table class="productTable">
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </table>
+        <div class=restartOrder>
+            <button class=restartOrderButton>Restart your Order</button>
+        </div>
+        <div class="totalPrice">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal"></td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="tax"></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total"></td>
+                </tr>
+            </table>
+        </div>
+        <div class=submitOrder>
+            <h3>When you're satisfied submit your order and it will be prepared at our closest location to you</h3>
+            <button class=button id=submitOrderButton>Submit</button>
+        </div>
+    </div>
+    <script>
+        function createCartItem(item, cookieID) {
+            console.log(cookieID);
+          return '<tr class="item">' +
+            '<td>' +
+              '<div class="cartInfo">' +
+                '<img src="' + item.image + '" class="cartItemImage">' +
+                '<div>' +
+                  '<p>' + item.name + '</p>' +
+                  '<small>Price: $' + parseFloat(item.price).toFixed(2) + '</small>' +
+                  '<br>' +
+                '</div>' +
+              '</div>' +
+            '</td>' +
+            '<td><input type="number" value="1" id="quant'+ i +'"></td>' +
+            '<td class="cost">$' + parseFloat(item.price).toFixed(2) + '</td>' +
+          '</tr>';
+        }
+        var seCart = [];
+        for (var i = 0; i < localStorage.length; i++) {
+          seCart.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        }
+        var s = "";
+        for (var i = 0; i < seCart.length; i++) {
+          s += createCartItem(seCart[i], seCart[i].code);
+        }
+        $(".productTable tr:last").after(s);
+        
+        $(".restartOrderButton").click(function(){
+            localStorage.clear();
+            window.location = "http://www.nolewcs20.com/midtermBiz/menu.html";
+        });
+        var b = "";
+        $("#submitOrderButton").click(function(){
+            alert("Redirecting you to our location page incase you forgot your store's address");
+            window.open("https://brandonmukadziwashe.github.io/snookys/locations.html");
+            localStorage.clear();
+        });
+    </script>
+    <script> //For updating the prices
+    cost = 0;
+    rtax = 0;
+        $(document).ready(function() {
+            updatesubtotal = (function() {
+                subtotal = 0;
+                $(".item").each(function(i) {
+                    cost = parseFloat($(this).find(".cost").text().replace("$", ""));
+                    var quant = $("#quant" + i).val();
+                    var rSubtotal = cost * quant;
+                    $(this).find(".subtotal").text("$" + rSubtotal.toFixed(2));
+                    subtotal += rSubtotal;
+                });
+                $("#subtotal").text("$" + subtotal.toFixed(2));
+            });
+            updatetax = (function() {
+                
+                rTax = subtotal * 0.0625;
+                $("#tax").text("$" + rTax.toFixed(2));
+            });
+            updatetotal = (function() {
+               rTotal = rTax + subtotal;
+               $("#total").text("$" + rTotal.toFixed(2));
+            });
+            updatesubtotal();
+            updatetax();
+            updatetotal();
+            $(".item input[type='number']").change(function () {
+                updatesubtotal();
+                updatetax();
+                updatetotal();
+            });
+        });
+    </script>
+    <div class="footer__container">
+        <div class="footer__links">
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Contact</h2>
+              <a href="contactUs.html">Contact</a> 
+              <a href="#">Support</a>
+            </div>
+  
+            <div class="footer__link--items">
+              <h2>About Us</h2>
+              <a href="aboutUs.html">Our Mission</a> 
+              <a href="#">Careers</a> 
+              <a href="#">Terms of Service</a>
+            </div>
+            
+          </div>
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Social Media</h2>
+              <a href="#">Instagram</a> 
+              <a href="#">Facebook</a>
+              <a href="#">Linkedin</a>
+            </div>
+          </div>
+        </div>
+        <section class="social__media">
+          <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="homepage.html" id="footer__logo">Snooky's</a>
+            </div>
+            <p class="website__rights">© Snooky's Cookies 2023. All rights reserved</p>
+            <div class="social__icons">
+              <a href="#" class="social__icon--link" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="social__icon--link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social__icon--link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              ></a>
+            </div>
+          </div>
+        </section>
+      </div>
+</body>
+</html>
