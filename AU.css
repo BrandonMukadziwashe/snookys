@@ -1,0 +1,43 @@
+h1 {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+#mission {
+  text-align: center;
+  margin:auto;
+  width: 50%;
+  outline:dashed #9518fc;
+  outline-offset:-10px; 
+  padding: 20px;
+}
+
+#container {
+    display: flex;
+    padding: 50px;
+}
+
+#mission h2{
+    padding-bottom: 25px;
+}
+
+#story {
+    text-align: center;
+    width: 50%;
+    outline:dashed #9518fc;
+    outline-offset:-10px; 
+    padding: 20px;
+  }
+
+  #bakery {
+    font-size: x-small;
+    text-align: right;
+    margin-top: 7px;
+  }
+
+  #story h2{
+      padding-bottom: 25px;
+  }

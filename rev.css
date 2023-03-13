@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+#customers {
+    flex: 1;
+}
+
+#pros {
+    flex: 1;
+}
+
+.reviewC {
+    color: white;
+    background: #9518fc;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.reviewP {
+    color: white;
+    background: #16bc24;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.space {
+    color:white;
+}
+
+#reviews1 {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  h2{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.person {
+    text-align: right;
+}
