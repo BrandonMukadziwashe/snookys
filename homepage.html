@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Snooky's Cookies</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    
+  </head>
+ 
+  <body>
+
+    <!-- Navigation Bar-->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Snooky's</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="menu.html" class="navbar__links" id="menu">Menu</a>
+            </li>
+            <li class="navbar__item">
+                <a href="aboutUs.html" class="navbar__links" id="about_us">About Us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="order.html" class="navbar__links" id="order_form">Order Form</a>
+            </li>
+            <li class="navbar__item">
+                <a href="locations.html" class="navbar__links" id="locations">Locations</a>
+            </li>
+            <li class="navbar__item">
+                <a href="reviews.html" class="navbar__links" id="reviews">Reviews</a>
+            </li>
+            <li class="navbar__item">
+                <a href="contactUs.html" class="navbar__links" id="contact_us">Contact Us</a>
+            </li>
+          
+          <li style="padding-bottom: 2rem;display: flex; align-items: center;
+          justify-content: center; width: 100%;
+          padding: 0 1rem;"><a href="order.html" class="button" id="order">Order Now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <h1>Best cookies ever</h1>
+      <p>Our cookies are made of butter and love,<br> 
+        Indulge in the heavenly goodness of our freshly baked cookies,<br>
+        crafted with the finest ingredients to satisfy your sweetest cravings. <br>
+        Come visit our cookie shop today!</p>
+        <div class="home-btn">
+          <button>
+            <a href="order.html">Order Now</a>
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+
+        <script>
+          $(document).ready(function() {
+            $('.home-btn button i').css({
+              'margin-left': '.5rem',
+              'font-size': '1rem',
+              'text-align': 'center',
+              'transition': '2s ease',
+              'animation': 'animate .5s ease infinite'
+            });
+          });
+        </script>
+    </section>
+
+
+    <!--------------------- Choice's Choice ---------------------->
+    <section class="product" id="product">
+      <h1 class="title">Our Chef's Choice <span>cookies</span></h1>
+      <div class="cookie-product">
+          <div class="inner-cookie-row">
+              <div class="inner-cookie-col">
+                  <img src="cookie7.jpeg" alt="">
+                  <div class="cookie-price">
+                      <p>$2</p>
+                  </div>
+                  <div class="cookie-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <h2>Carrot Cake Cookie</h2>
+                  <h3>Dark Chocolate – Coffee</h3>
+                  <p>A crisp exterior, and a chewy interior.</p>
+              </div>
+              <div class="inner-cookie-col">
+                  <img src="cookie2.png" alt="">
+                  <div class="cookie-price">
+                      <p>$2</p>
+                  </div>
+                  <div class="cookie-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <h2>Cinnamon Roll Cookie</h2>
+                  <h3>gluten free</h3>
+                  <p>Sweet and creamy icing</p>
+              </div>
+              <div class="inner-cookie-col">
+                  <img src="cookie3.jpeg" alt="">
+                  <div class="cookie-price">
+                      <p>$3</p>
+                  </div>
+                  <div class="cookie-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <h2>Coconut Key Lime</h2>
+                  <h3>gluten free</h3>
+                  <p>A crunchy and sweet texture.</p>
+              </div>
+              <div class="inner-cookie-col">
+                  <img src="cookie4.jpeg" alt="">
+                  <div class="cookie-price">
+                      <p>$3</p>
+                  </div>
+                  <div class="cookie-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <h2>Crinkle Cookie</h2>
+                  <h3>gluten free</h3>
+                  <p>A soft and tender texture and a rich, creamy flavor</p>
+              </div>
+              <div class="inner-cookie-col">
+                  <img src="cookie5.png" alt="">
+                  <div class="cookie-price">
+                      <p>$2</p>
+                  </div>
+                  <div class="cookie-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <h2>PinWheel Cookie</h2>
+                  <h3>gluten free</h3>
+                  <p>A rich, buttery vanilla cookie amped up with loads of ooey-gooey milk chocolate chunks.</p>
+              </div>
+              <div class="inner-cookie-col">
+                  <img src="cookie6.png" alt="">
+                  <div class="cookie-price">
+                      <p>$4</p>
+                  </div>
+                  <div class="cookie-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <h2>Thumbprint</h2>
+                  <h3>gluten free</h3>
+                  <p>Soft and chewy cookie base, topped with a drizzle of melted chocolate</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Contact</h2>
+            <a href="contactUs.html">Contact</a> 
+            <a href="#">Support</a>
+          </div>
+
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="aboutUs.html">Our Mission</a> 
+            <a href="#">Careers</a> 
+            <a href="#">Terms of Service</a>
+          </div>
+          
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="#">Instagram</a> 
+            <a href="#">Facebook</a>
+            <a href="#">Linkedin</a>
+          </div>
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="#home" id="footer__logo">Snooky's</a>
+          </div>
+          <p class="website__rights">© Snooky's Cookies 2023. All rights reserved</p>
+          <div class="social__icons">
+            <a href="#" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social__icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </body>
+</html>
