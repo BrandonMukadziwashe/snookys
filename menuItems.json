@@ -1,0 +1,75 @@
+[
+    {
+        "name"  : "Sugar Cookie",
+        "price" : "2.50",
+        "code"  : "SC",
+        "image" : "images/sugarCookie.jpg"
+    },
+    {
+        "name"  : "Chocolate Chip Cookie",
+        "price" : "2.50",
+        "code"  : "ChC",
+        "image" : "images/ChocolateChipCookie.jpg"
+    },
+    {
+        "name"  : "Oatmeal Raisin",
+        "price" : "1.50",
+        "code"  : "ORC",
+        "image" : "images/OatmealRaisinCookie.jpg"
+    },
+    {
+        "name"  : "Snickerdoodle",
+        "price" : "1.50",
+        "code"  : "SD",
+        "image" : "images/snickerdoodle.jpg"
+    },
+    {
+        "name"  : "Pinwheel Cookie",
+        "price" : "3.50",
+        "code"  : "PWC",
+        "image" : "images/pinWheelCookie.png"
+    },
+    {
+        "name"  : "Crinkle Cookie",
+        "price" : "3.00",
+        "code"  : "CC",
+        "image" : "images/crinkleCookie.jpg"
+    },
+    {
+        "name"  : "Thumbprint Cookie",
+        "price" : "2.75",
+        "code"  : "TPC",
+        "image" : "images/thumbPrintCookie.png"
+    },
+    {
+        "name"  : "Carrot Cake Cookie",
+        "price" : "4.00",
+        "code"  : "CaC",
+        "image" : "images/carrotCakeCookie.jpg"
+    },
+    {
+        "name"  : "Chocolate Chip M&M Cookie",
+        "price" : "3.00",
+        "code"  : "CMC",
+        "image" : "images/ChocolateChipMnMCookie.jpg"
+    },
+    {
+        "name"  : "Coconut Key Lime Cookie",
+        "price" : "3.50",
+        "code"  : "CLC",
+        "image" : "images/coconutKeyLimeCookie.jpg"
+    },
+    {
+        "name"  : "Strawberry Shortcake Cookie",
+        "price" : "2.75",
+        "code"  : "SSC",
+        "image" : "images/strawberryShortCakeCookie.png"
+    },
+    {
+        "name"  : "Cinnamon Roll Cookie",
+        "price" : "4.00",
+        "code"  : "CRC",
+        "image" : "images/cinnamonRollCookie.png"
+    }
+
+]
