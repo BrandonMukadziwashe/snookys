@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Snooky's Menu</title>
+<script src="jquery-3.6.3.min.js"></script>
+<link rel="stylesheet" href="menu.css" />
+    <!-- <link rel="stylesheet" href="menu.css" /> whats this for? -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar-->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Snooky's</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="menu.html" class="navbar__links" id="menu">Menu</a>
+            </li>
+            <li class="navbar__item">
+                <a href="aboutUs.html" class="navbar__links" id="about_us">About Us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="order.html" class="navbar__links" id="order_form">Order Form</a>
+            </li>
+            <li class="navbar__item">
+                <a href="locations.html" class="navbar__links" id="locations">Locations</a>
+            </li>
+            <li class="navbar__item">
+                <a href="reviews.html" class="navbar__links" id="reviews">Reviews</a>
+            </li>
+            <li class="navbar__item">
+                <a href="contactUs.html" class="navbar__links" id="contact_us">Contact Us</a>
+            </li>
+          
+          <li style="padding-bottom: 2rem;display: flex; align-items: center;
+          justify-content: center; width: 100%;
+          padding: 0 1rem;"><a href="order.html" class="button" id="order">Order Now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="menuContainer">
+        <div class="menu">
+          <h2 class="menuGroupHeading">
+              Classics
+          </h2>
+          <div class="menuGroup">
+              <div class="menuItem">
+                  <img src="images/sugarCookie.jpg" alt="Sugar Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Sugar Cookie </span>
+                          <span class="menuItemPrice">$2.50</span>
+                      </h3>
+                      <p class="menuItemDescription">Simply the best. A melt-in-your-mouth, buttery cookie with hints of vanilla.</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="SC" >
+                      </input>
+                  </div>
+              </div>
+              <div class="menuItem">
+                  <img src="images/ChocolateChipCookie.jpg" alt="Chocolate Chip Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Chocolate Chip Cookie</span>
+                          <span class="menuItemPrice">$2.50</span>
+                      </h3>
+                      <p class="menuItemDescription">A rich, buttery vanilla cookie amped up with loads of ooey-gooey milk chocolate chunks.</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="ChC">
+                      </input>
+                  </div>
+              </div>
+              <div class="menuItem">
+                  <img src="images/OatmealRaisinCookie.jpg" alt="Oatmeal Raisin Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Oat Meal Raisin</span>
+                          <span class="menuItemPrice">$2.50</span>
+                      </h3>
+                      <p class="menuItemDescription">You nerd.</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="ORC">
+                      </input>
+                  </div>
+              </div>
+              <div class="menuItem">
+                  <img src="images/snickerdoodle.jpg" alt="Snickerdoodle" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Snickerdoodle</span>
+                          <span class="menuItemPrice">$1.50</span>
+                      </h3>
+                      <p class="menuItemDescription">Best for old-people bingo potluck.</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="SD">
+                      </input>
+                  </div>
+              </div>
+          </div>
+          <h2 class="menuGroupHeading">
+              Specialities
+          </h2>
+          <div class="menuGroup">
+              <div class="menuItem">
+                  <img src="images/pinWheelCookie.png" alt="Pinwheel Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Pinwheel Cookie</span>
+                          <span class="menuItemPrice">$3.50</span>
+                      </h3>
+                      <p class="menuItemDescription">A court jester's favorite snack inbetween juggling planks of wood.</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="PWC">
+                      </input>
+                  </div>
+              </div>
+              <div class="menuItem">
+                  <img src="images/crinkleCookie.jpg" alt="Crinkle Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Crinkle Cookie</span>
+                          <span class="menuItemPrice">$3.00</span>
+                      </h3>
+                      <p class="menuItemDescription">A unique and dry dessert that outshines everything at Baskin-Robins but requires a glass of water.</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="CC">
+                      </input>
+                  </div>
+              </div>
+              <div class="menuItem">
+                  <img src="images/thumbPrintCookie.png" alt="Thumbprint Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Thumbprint Cookie</span>
+                          <span class="menuItemPrice">$2.75</span>
+                      </h3>
+                      <p class="menuItemDescription">Want to look quaint for the retirment home girlies, pick up a cute little thumbprint cookie!</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="TPC">
+                      </input>
+                  </div>
+              </div>
+              <div class="menuItem">
+                  <img src="images/carrotCakeCookie.jpg" alt="Carrot Cake Cookie" class="menuItemImage">
+                  <div class="menuItemText">
+                      <h3 class="menuItemHeading">
+                          <span class="menuItemName">Carrot Cake Cookie </span>
+                          <span class="menuItemPrice">$4.00</span>
+                      </h3>
+                      <p class="menuItemDescription">Why eat a nasty vegtable when our delicious Carrot Cake Cookie exist?</p>
+                      <input type="image" src="images/circledPlus.png" class="addToCart" id="CaC">
+                      </input>
+                  </div>
+              </div>
+          </div>
+          <h2 class="menuGroupHeading">
+              New Additions/Staff Recommendations
+          </h2>
+          <div class="menuGroup">
+            <div class="menuItem">
+                <img src="images/ChocolateChipMnMCookie.jpg" alt="Chocolate Chip M&M Cookie" class="menuItemImage">
+                <div class="menuItemText">
+                    <h3 class="menuItemHeading">
+                        <span class="menuItemName">Chocolate Chip M&M Cookie</span>
+                        <span class="menuItemPrice">$3.00</span>
+                    </h3>
+                    <p class="menuItemDescription">Converting a classic into a tradition the Snooky family's recipe is a 5-generation-heirloom and is back on our shelves!</p>
+                    <input type="image" src="images/circledPlus.png" class="addToCart" id="CMC">
+                    </input>
+                </div>
+            </div>
+            <div class="menuItem">
+                <img src="images/coconutKeyLimeCookie.jpg" alt="Coconut Key Lime Cookie" class="menuItemImage">
+                <div class="menuItemText">
+                    <h3 class="menuItemHeading">
+                        <span class="menuItemName">Coconut Key Lime Cookie</span>
+                        <span class="menuItemPrice">$3.50</span>
+                    </h3>
+                    <p class="menuItemDescription">A rich tropical treasure, providing the taste of a sunny beach.</p>
+                    <input type="image" src="images/circledPlus.png" class="addToCart" id="CLC">
+                    </input>
+                </div>
+            </div>
+            <div class="menuItem">
+                <img src="images/strawberryShortCakeCookie.png" alt="Strawberry Shortcake Cookie" class="menuItemImage">
+                <div class="menuItemText">
+                    <h3 class="menuItemHeading">
+                        <span class="menuItemName">Strawberry Shortcake Cookie</span>
+                        <span class="menuItemPrice">$2.75</span>
+                    </h3>
+                    <p class="menuItemDescription">Inspired by the best animated show ever, a sweet and comforting Snooky specialty.</p>
+                    <input type="image" src="images/circledPlus.png" class="addToCart" id="SSC">
+                    </input>
+                </div>
+            </div>
+            <div class="menuItem">
+                <img src="images/cinnamonRollCookie.png" alt="Cinnamon Roll Cookie" class="menuItemImage">
+                <div class="menuItemText">
+                    <h3 class="menuItemHeading">
+                        <span class="menuItemName">Cinnamon Roll Cookie </span>
+                        <span class="menuItemPrice">$4.00</span>
+                    </h3>
+                    <p class="menuItemDescription">Your favorite German pastry with a Snooky twist! </p>
+                    <input type="image" src="images/circledPlus.png" class="addToCart" id="CRC">
+                    </input>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="footer__container">
+        <div class="footer__links">
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Contact</h2>
+              <a href="contactUs.html">Contact</a> 
+              <a href="#">Support</a>
+            </div>
+  
+            <div class="footer__link--items">
+              <h2>About Us</h2>
+              <a href="aboutUs.html">Our Mission</a> 
+              <a href="#">Careers</a> 
+              <a href="#">Terms of Service</a>
+            </div>
+            
+          </div>
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Social Media</h2>
+              <a href="#">Instagram</a> 
+              <a href="#">Facebook</a>
+              <a href="#">Linkedin</a>
+            </div>
+          </div>
+        </div>
+        <section class="social__media">
+          <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="homepage.html" id="footer__logo">Snooky's</a>
+            </div>
+            <p class="website__rights">© Snooky's Cookies 2023. All rights reserved</p>
+            <div class="social__icons">
+              <a href="#" class="social__icon--link" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="social__icon--link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social__icon--link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              ></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+  <script>
+    cart = [];
+    order = "";
+    $.get("https://brandonmukadziwashe.github.io/snookys/menuItems.json",
+      function(data)
+      {
+        str = JSON.stringify(data);
+        readData = JSON.parse(str);
+        $(".addToCart").click(function()
+        {
+          for (i=0;i<readData.length;i++)
+          {
+            if(this.id == readData[i].code){
+                 localStorage.setItem(order + i, JSON.stringify(readData[i]));
+            }
+          }
+        })
+      });
+  </script>
+</body>
+</html>
